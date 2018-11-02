@@ -19,9 +19,16 @@ app.appendChild(container); //to append CONTAINER to app root
     if (req.status >= 200 && req.status < 400) {
       data.forEach(movie => {
         // console.log(movie.title);
-        const box = document.createElement('div');
+        const box = document.createElement('div'); //created div with BOX CLASS
         box.setAttribute('class', 'box');
-        
+
+        const h1 = document.createElement('h1'); //created h1 set to text content to the TITLE from data from website's/JSON data.
+        h1.textContent = movie.title;
+
+        const desc = document.createElement('desc'); //created DESC and set textContent to the DESCRIPTION from data from website's/JSON data.
+        movie.description = movie.description.substring(0, 150); //substring and 150 used here to limit description and keep all BOX sizes the same.
+        desc.textContent = `${movie.description}...`;
+
       });
     } else {
       console.log('Sorry There is an Error');

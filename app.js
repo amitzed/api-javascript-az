@@ -1,6 +1,9 @@
 
 const app = document.getElementById('root');
-console.log(app);
+const logo = document.createElement('img');
+logo.src = 'pic1.gif';
+const container = document.createElement('div');
+container.setAttribute('class', 'container');
 
 //   var req = new XMLHttpRequest(); //create request
 //

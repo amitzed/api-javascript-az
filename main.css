@@ -1,3 +1,36 @@
 body {
-  background-color: steelblue;
+  background: #555DFF;
+  color: #FFCC00;
+  font-family: 'Amatic SC', cursive;
+  line-height: 2.1;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+
+#root {
+  margin: 0 auto;
+  max-width: 1200px;
+}
+
+.container {
+  display: flex;
+  flex-wrap: wrap;
+}
+
+.card {
+  margin: 1rem;
+  border: 1px solid gray;
+}
+
+@media screen and (min-width: 600px) {
+  .card {
+    flex: 1 1 calc(50% - 2rem);
+  }
+}
+
+@media screen and (min-width: 900px) {
+  .card {
+    flex: 1 1 calc(33% - 2rem);
+  }
 }

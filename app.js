@@ -1,7 +1,7 @@
 
 const app = document.getElementById('root'); //to access ROOT ELEMENT in index.html
 const logo = document.createElement('img'); //created image/pic ELEMENT
-logo.src = 'pic1.gif'; //set the SRC attribute
+logo.src = 'spaceXLogo.gif'; //set the SRC attribute
 const container = document.createElement('div'); //Set CLASS Attr to the CONTAINER
 container.setAttribute('class', 'container');
 
@@ -22,18 +22,23 @@ app.appendChild(container); //to append CONTAINER to app root
         const box = document.createElement('div'); //created div with BOX CLASS
         box.setAttribute('class', 'box');
 
-        const h1 = document.createElement('h1'); //created h1 set to text content to the TITLE from data from website's/JSON data.
+        const h1 = document.createElement('h1'); //created h1 set to text content to the launch_year from data from website's/JSON data.
         h1.textContent = spacex.mission_name;
 
-        const desc = document.createElement('desc'); //created DESC and set textContent to the DESCRIPTION from data from website's/JSON data.
-        spacex.launch_year = spacex.launch_year.substring(0, 150); //substring and 150 used here to limit description and keep all BOX sizes the same.
-        desc.textContent = `${spacex.launch_year}...`;
+        const year = document.createElement('p'); //created DESC and set textContent to the DESCRIPTION from data from website's/JSON data.
+        spacex.launch_year = spacex.launch_year.substring(0, 150); //substring and 150 used here to limit yearription and keep all BOX sizes the same.
+        year.textContent = `${spacex.launch_year}`;
+
+
+        const h4 = document.createElement('h4'); //created h4 set to text content to the launch_year from data from website's/JSON data.
+        h4.textContent = spacex.details;
 
         container.appendChild(box); //to append box to the container
 
-        //For each Box, it will contain the H1 and DESC so below code is to append them to the BOX.
+        //For each Box, it will contain the H1 and P and H4 so below code is to append them to the BOX.
         box.appendChild(h1);
-        box.appendChild(desc);
+        box.appendChild(year);
+        box.appendChild(h4);
 
       });
     } else {

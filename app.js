@@ -5,6 +5,9 @@ logo.src = 'pic1.gif';
 const container = document.createElement('div');
 container.setAttribute('class', 'container');
 
+app.appendChild(logo);
+app.appendChild(container);
+
 //   var req = new XMLHttpRequest(); //create request
 //
 //   req.open('GET', 'https://ghibliapi.herokuapp.com/films', true); //using GET request on the URL endpoint to open a new connection

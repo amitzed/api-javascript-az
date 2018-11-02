@@ -29,6 +29,8 @@ app.appendChild(container); //to append CONTAINER to app root
         movie.description = movie.description.substring(0, 150); //substring and 150 used here to limit description and keep all BOX sizes the same.
         desc.textContent = `${movie.description}...`;
 
+        container.appendChild(box); //to append box to the container
+
       });
     } else {
       console.log('Sorry There is an Error');

@@ -6,12 +6,14 @@
   req.onload = function () {
     //JSON data is accessed here
     var data  = JSON.parse(this.response); //to parse response and make DATA variable that has all the JSON as an ARRAY of JS OBJECTS.
-    data.forEach(movie => {
-      console.log(movie.title);
-    })
-
-
-
+    //IF statment BELOW to have success for any status-code response between 200-300 and a NOT-FOUND log out code outside those ranges i.e. if incorrect URL is used/typed in.
+    if (req.status >= 200 && req.status < 400) {
+      data.forEach(movie => {
+        console.log(movie.title);
+      });
+    } else {
+      console.log('Sorry There is an Error');
+    }
 }
 
 req.send(); //the SEND request

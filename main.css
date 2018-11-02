@@ -18,19 +18,19 @@ body {
   flex-wrap: wrap;
 }
 
-.card {
+.box {
   margin: 1rem;
   border: 1px solid gray;
 }
 
 @media screen and (min-width: 600px) {
-  .card {
+  .box {
     flex: 1 1 calc(50% - 2rem);
   }
 }
 
 @media screen and (min-width: 900px) {
-  .card {
+  .box {
     flex: 1 1 calc(33% - 2rem);
   }
 }

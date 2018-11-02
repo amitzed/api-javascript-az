@@ -31,6 +31,10 @@ app.appendChild(container); //to append CONTAINER to app root
 
         container.appendChild(box); //to append box to the container
 
+        //For each Box, it will contain the H1 and DESC so below code is to append them to the BOX.
+        box.appenChild(h1);
+        box.appenChild(desc);
+
       });
     } else {
       console.log('Sorry There is an Error');

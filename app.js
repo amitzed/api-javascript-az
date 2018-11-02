@@ -37,7 +37,10 @@ app.appendChild(container); //to append CONTAINER to app root
 
       });
     } else {
-      console.log('Sorry There is an Error');
+      // console.log('Sorry There is an Error');
+      const err = document,createElement('errNotice');
+      err.textContent = `Error`;
+      app.appendChild(err);
     }
 }
 

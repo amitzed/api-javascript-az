@@ -1,1 +1,1 @@
-Practice and leaning making API calls using Javascript
+Practice and learning making API calls using Javascript
